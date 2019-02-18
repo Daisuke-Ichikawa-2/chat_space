@@ -32,47 +32,48 @@ Things you may want to cover:
     <dd>(2)データ管理</dd>
 </dl>
 
+<dl>
+  <dt>b.メッセージ送受信機能</dt>
+    <dd>(1)メッセージ管理</dd>
+    <dd>(2)送信・受信</dd>
+    <dd>(3)グルーピング</dd>
+    <dd>(4)画像添付</dd>
+</dl>
+
+<dl>
+  <dt>c.ユーザ管理機能</dt>
+    <dd>(1)新規追加</dd>
+    <dd>(2)管理</dd>
+    <dd>(3)編集</dd>
+</dl>
 
 
+* ---- 2:エンティティ、およびテーブルの関連付け
+<dl>
+  <dt>上記、日本語エンティティとアルファベット紐つけ</dt>
+    <dd>a.groups</dd>
+    <dd>b.messages</dd>
+    <dd>c.users</dd>
 
+    <dd>☆）関連づけテーブル：</dd>
+    <dd>d.members</dd>
 
+* ---- 3:リレーション：
+  + groups.user_id = users.id
+  + members.group_id = groups.id
+  + members.user_id = users.id
+  + messages.user_id = users.id
+  + messages.group_id = groups.id
 
-b.メッセージ送受信機能
-  (1)メッセージ管理
-  (2)送信・受信
-  (3)グルーピング
-  (4)画像添付
+* ---- 4:アソシエーション：
+* ※１  ユーザとグループを管理するため、メンバーエンティティを設定する。
 
-c.ユーザ管理機能
-  (1)新規追加
-  (2)管理
-  (3)編集
+  + ユーザ【多】：グループ【多】
+  + グループ【１】：メッセージ／イメージファイル【多】
+  + メンバー【多】：ユーザ【１】
+  + メンバー【多】：グループ【１】
 
----- 2:エンティティ、およびテーブルの関連付け
-上記、日本語エンティティとアルファベット紐つけ
-  a.groups
-  b.messages
-  c.users
-
-☆）関連づけテーブル：
-  d.members
-
----- 3:リレーション：
-  groups.user_id = users.id
-  members.group_id = groups.id
-  members.user_id = users.id
-  messages.user_id = users.id
-  messages.group_id = groups.id
-
----- 4:アソシエーション：
-※１  ユーザとグループを管理するため、メンバーエンティティを設定する。
-
-  ユーザ【多】：グループ【多】
-  グループ【１】：メッセージ／イメージファイル【多】
-  メンバー【多】：ユーザ【１】
-  メンバー【多】：グループ【１】
-
----- 5:マークダウン＆定義セクション：
+* ---- 5:マークダウン＆定義セクション：
 
 ## users
 
