@@ -23,12 +23,13 @@ Things you may want to cover:
 
 * ...
 
-'---- 1:chatspace 機能
-'機能については、以下に記す。
+* ---- 1:chatspace 機能
+* 機能については、以下に記す。
+
 <dl>
   <dt>a.グループ管理機能</dt>
     <dd>(1)新規追加</dd>
-    <dd>(2)データ管理</dd>>
+    <dd>(2)データ管理</dd>
 </dl>
 
 
