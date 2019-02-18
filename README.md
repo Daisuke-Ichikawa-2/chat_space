@@ -57,6 +57,7 @@ Things you may want to cover:
 
     <dd>☆）関連づけテーブル：</dd>
     <dd>d.members</dd>
+</dl>
 
 * ---- 3:リレーション：
   + groups.user_id = users.id
@@ -80,7 +81,8 @@ Things you may want to cover:
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
 |id           |integer  |null: false, unique: true                    |
-|name         |Stroing  |null: false, foreign_key: true               |
+|name         |String   |null: false                                  |
+|password     |Stroing  |null: false                                  |
 
 
 ## groups
@@ -88,7 +90,7 @@ Things you may want to cover:
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
 |id           |integer  |null: false, unique: true                    |
-|name         |Stroing  |null: false, foreign_key: true               |
+|name         |Stroing  |null: false,                                 |
 
 ## membersテーブル
 
@@ -98,6 +100,15 @@ Things you may want to cover:
 |user_id      |integer  |null: false, foreign_key: true               |
 |group_id     |integer  |null: false, foreign_key: true               |
 
+## messagesテーブル
+
+|Column       |Type     |Options                                      |
+|------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
+|message      |String   |                                             |
+|image        |String   |                                             |
+|group_id     |integer  |null: false, foreign_key: true               |
+|user_id      |integer  |null: false, foreign_key: true               |
 
 
 
