@@ -6,21 +6,13 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
-
 * ...
 
 * ---- 1:chatspace 機能
@@ -54,8 +46,6 @@ Things you may want to cover:
     <dd>a.groups</dd>
     <dd>b.messages</dd>
     <dd>c.users</dd>
-
-    <dd>☆）関連づけテーブル：</dd>
     <dd>d.members</dd>
 </dl>
 
@@ -84,6 +74,9 @@ Things you may want to cover:
 |name         |String   |null: false                                  |
 |password     |Stroing  |null: false                                  |
 
+### Association
+- has_many :groups
+- has_many :messages
 
 ## groups
 
@@ -92,13 +85,9 @@ Things you may want to cover:
 |id           |integer  |null: false, unique: true                    |
 |name         |Stroing  |null: false,                                 |
 
-## membersテーブル
-
-|Column       |Type     |Options                                      |
-|------       |----     |-------                                      |
-|id           |integer  |null: false, unique: true                    |
-|user_id      |integer  |null: false, foreign_key: true               |
-|group_id     |integer  |null: false, foreign_key: true               |
+### Association
+- has_many :messages
+- has_many :users
 
 ## messagesテーブル
 
@@ -106,57 +95,23 @@ Things you may want to cover:
 |------       |----     |-------                                      |
 |id           |integer  |null: false, unique: true                    |
 |message      |String   |                                             |
-|image        |String   |                                             |
+|image        |binary   |                                             |
 |group_id     |integer  |null: false, foreign_key: true               |
 |user_id      |integer  |null: false, foreign_key: true               |
 
-
+### Association
+- belongs_to :user
+- belongs_to :group
 
 ## membersテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|Column       |Type     |Options                                      |
+|------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
+|user_id      |integer  |null: false, foreign_key: true               |
+|group_id     |integer  |null: false, foreign_key: true               |
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-
-
-
-
-
-groups
-  group_id
-  group_name
-  timestamp...
-
-messages
-  body(message)
-  image
-  user_id
-  timestamp...
-  group_id
-
-users
-  id
-  name
-
-members
-  group_id
-  user_id
-  timestamp
-
-relation
- users:n --- group:n
- group:1 --- massges:n
-
-
-
-
-
-
-
 
