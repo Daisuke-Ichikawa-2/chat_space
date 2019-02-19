@@ -15,8 +15,6 @@ Things you may want to cover:
 * Deployment instructions
 * ...
 
-
-
 ## users
 
 |Column       |Type     |Options                                      |
