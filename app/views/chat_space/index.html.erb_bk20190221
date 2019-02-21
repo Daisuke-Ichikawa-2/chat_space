@@ -1,0 +1,64 @@
+
+
+<header class="header">
+  <p>グループを作成しました</p>
+</header>
+
+<div class="contents">
+
+
+<!-- レフトコンテンツ.ヘッダ -->
+  <div class = "contents__left-contents">
+    <div class = "contents__left-contents__userform">
+      <div class = "contents__left-contents__userform__user">test-user</div>
+      <div class = "contents__left-contents__userform__font"><i class="far fa-comment-alt"></i> <i class="fas fa-cog"></i></div>
+    </div>
+
+<!-- レフトコンテンツ -->
+    <div class = "contents__left-contents__groupform">
+      <div class = "contents__left-contents__groupform__group">test-group</div>
+      <div class = "contents__left-contents__groupform__group__text">さようなら</div>
+    </div>
+  </div>
+
+
+
+<!-- メインヘッダ部 -->
+  <div class = "contents__main-contents">
+    <div class="contents__main-contents__main-header">
+      <div class = "contents__main-contents__main-header__link">
+            <div class = "contents__main-contents__main-header__link__box">Edit</div>
+       </div>
+       <div class = "contents__main-contents__main-header__space"></div>
+       <div class = "contents__main-contents__main-header__group">test-group</div>
+       <div class = "contents__main-contents__main-header__space2"></div>
+       <div class = "contents__main-contents__main-header__member">member1</div>
+    </div>
+
+<!-- メインボディ部記述 -->
+     <div class = "contents__main-contents__body">
+       <div class = "contents__main-contents__body__border"></div>
+       <div class = "contents__main-contents__body__space3"></div>
+       <div class = "contents__main-contents__body__text">
+          <div class = "contents__main-contents__body__text__user">test-user</div>
+          <div class = "contents__main-contents__body__text__time">2019/02/17(Sun) 12:24:41</div>
+          <div class = "contents__main-contents__body__text__message">test Message</div>
+       </div>
+     </div>
+
+<!-- 検索フォーム -->
+    <div class = "contents__main-contents__footter">
+      <form class = "contents__main-contents__footter__form">
+        <input type="text" class = "contents__main-contents__footter__form__input" name="name" placeholder=" type a messagess">
+        <label class="contents__main-contents__footter__form__image" for="message_image"><i class="far fa-image"></i></label>
+        <div class = "contents__main-contents__footter__form__button">Send</div>
+      </form>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
