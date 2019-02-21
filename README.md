@@ -10,6 +10,7 @@ Things you may want to cover:
 
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
 |name         |String   |null: false                                  |
 |password     |Stroing  |null: false                                  |
 
@@ -22,6 +23,7 @@ Things you may want to cover:
 
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
 |name         |Stroing  |null: false,                                 |
 
 ### Association
@@ -33,8 +35,9 @@ Things you may want to cover:
 
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
 |message      |String   |                                             |
-|image        |text     |                                             |
+|image        |binary   |                                             |
 |group_id     |integer  |null: false, foreign_key: true               |
 |user_id      |integer  |null: false, foreign_key: true               |
 
@@ -46,6 +49,7 @@ Things you may want to cover:
 
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
+|id           |integer  |null: false, unique: true                    |
 |user_id      |integer  |null: false, foreign_key: true               |
 |group_id     |integer  |null: false, foreign_key: true               |
 
