@@ -1,8 +1,9 @@
 
-@import "reset";
+@import "./reset";
 @import "./config/enviroment";
 @import "./modules/leftContents";
 @import "./modules/mainContents";
+@import "./modules/user"
 
 .header{
   background-color: $siteMainBlue;
@@ -10,3 +11,4 @@
   font-weight: bold;
   text-align: center;
 }
+
