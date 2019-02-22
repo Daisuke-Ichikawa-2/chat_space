@@ -1,0 +1,39 @@
+%body
+  %header.header
+    %p グループを作成しました
+  .contents
+    / レフトコンテンツ.ヘッダ
+    .contents__left-contents
+      .contents__left-contents__userform
+        .contents__left-contents__userform__user test-user
+        .contents__left-contents__userform__font
+          = fa_icon 'edit'
+          = fa_icon 'cog'
+      / レフトコンテンツ
+      .contents__left-contents__groupform
+        .contents__left-contents__groupform__group test-group
+        .contents__left-contents__groupform__group__text さようなら
+    / メインヘッダ部
+    .contents__main-contents
+      .contents__main-contents__main-header
+        .contents__main-contents__main-header__link
+          .contents__main-contents__main-header__link__box Edit
+        .contents__main-contents__main-header__space
+        .contents__main-contents__main-header__group test-group
+        .contents__main-contents__main-header__space2
+        .contents__main-contents__main-header__member member1
+      / メインボディ部記述
+      .contents__main-contents__body
+        .contents__main-contents__body__border
+        .contents__main-contents__body__space3
+        .contents__main-contents__body__text
+          .contents__main-contents__body__text__user test-user
+          .contents__main-contents__body__text__time 2019/02/17(Sun) 12:24:41
+          .contents__main-contents__body__text__message test Message
+      / 検索フォーム
+      .contents__main-contents__footter
+        %form.contents__main-contents__footter__form
+          %input.contents__main-contents__footter__form__input{:name => "name", :placeholder => " type a messagess", :type => "text"}/
+          %label.contents__main-contents__footter__form__image{:for => "message_image"}
+            = fa_icon 'image'
+          .contents__main-contents__footter__form__button Send

@@ -1,0 +1,12 @@
+
+@import "reset";
+@import "./config/enviroment";
+@import "./modules/leftContents";
+@import "./modules/mainContents";
+
+.header{
+  background-color: $siteMainBlue;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}

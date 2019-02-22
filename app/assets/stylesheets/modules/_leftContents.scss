@@ -1,0 +1,48 @@
+@import "reset";
+@import "./config/enviroment";
+
+.contents{
+    &__left-contents{
+      width: 300px;
+      height: 100vh;
+      background-color: red;
+      color: #fff;
+      font-weight: bold;
+      display: inline-block;
+
+        &__userform{
+          height: 100px;
+          background-color: #253141;
+
+            &__user {
+              color: #fff;
+              width: 180px;
+              font-size: 16px;
+              padding: 38px 0 0 20px;
+              display: inline-block;
+            }
+
+            &__font {
+              color: #fff;
+              font-size: 15px;
+              padding: 0 20px;
+              display: inline-block;
+            }
+        }
+
+      &__groupform {
+       height: calc(100vh - 100px);
+       background-color: #2f3e51;
+
+        &__group{
+          font-size: 15px;
+          padding: 20px 20px 5px ;
+
+          &__text{
+            font-size: 11px;
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+}
