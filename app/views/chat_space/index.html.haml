@@ -1,6 +1,6 @@
 %body
-  %header.header
-    %p グループを作成しました
+  / %header.header
+  /   %p グループを作成しました
   .contents
     / レフトコンテンツ.ヘッダ
     .contents__left-contents
@@ -8,7 +8,8 @@
         .contents__left-contents__userform__user test-user
         .contents__left-contents__userform__font
           = fa_icon 'edit'
-          = fa_icon 'cog'
+          = link_to "/users/1/edit" do
+            = fa_icon 'cog'
       / レフトコンテンツ
       .contents__left-contents__groupform
         .contents__left-contents__groupform__group test-group
