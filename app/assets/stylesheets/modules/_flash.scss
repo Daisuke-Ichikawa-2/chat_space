@@ -1,0 +1,15 @@
+@import "./config/enviroment";
+
+.notification {
+  .notice {
+    background-color: $siteMainBlue;
+    color: white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $alertOrange;
+    color: white;
+    text-align: center;
+  }
+}
