@@ -22,7 +22,7 @@ Things you may want to cover:
 
 |Column       |Type     |Options                                      |
 |------       |----     |-------                                      |
-|name         |Stroing  |null: false,                                 |
+|name         |String   |null: false,                                 |
 
 ### Association
 - has_many :members
