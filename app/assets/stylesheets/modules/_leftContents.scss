@@ -9,10 +9,16 @@
       color: #fff;
       font-weight: bold;
       display: inline-block;
+      position: relative;
 
         &__userform{
           height: 100px;
           background-color: #253141;
+          position: absolute;
+          left: 0px;
+          top : 0px;
+          right: 0px;
+          bottom :0px;
 
             &__user {
               color: #fff;
@@ -33,17 +39,27 @@
 
       &__groupform {
        height: calc(100vh - 100px);
+       width:300px;
        background-color: #2f3e51;
+       position: absolute;
+       left:        0px;
+       top:       100px;
+       right:       0px;
+       display: inline-block;
+
 
         &__group{
+          // display: inline-block;
           font-size: 15px;
           padding: 20px 20px 5px ;
 
           &__text{
+            // display: inline-block;
             font-size: 11px;
             padding: 0 20px;
           }
         }
+
       }
     }
 }

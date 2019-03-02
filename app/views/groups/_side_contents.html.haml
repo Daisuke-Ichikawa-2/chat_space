@@ -1,0 +1,21 @@
+.contents__left-contents__groupform
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .contents__left-contents__groupform__group
+        = group.name
+      .contents__left-contents__groupform__group__text
+        = group.show_last_message
+
+
+
+/ .contents__left-contents__groupform
+/   .contents__left-contents__groupform__group test-group
+/   .contents__left-contents__groupform__group__text さようなら
+
+
+/ .contents__left-contents__groupform
+/   - current_user.groups.each do |group|
+/     = link_to group_messages_path(group) do
+/       .contents__left-contents__groupform__group
+/         = group.name
+/       .contents__left-contents__groupform__group__text 投稿は特にありません。

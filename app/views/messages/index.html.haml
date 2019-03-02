@@ -1,0 +1,35 @@
+%body
+  / %header.header
+  /   %p グループを作成しました
+  .contents
+    / レフトコンテンツ.ヘッダ
+    .contents__left-contents
+      .contents__left-contents__userform
+        .contents__left-contents__userform__user test-user
+        .contents__left-contents__userform__font
+          = link_to new_group_path  do
+            = fa_icon 'edit'
+          = link_to edit_user_path(current_user)  do
+            = fa_icon 'cog'
+      / レフトコンテンツ
+    = render 'side_contents'
+    / メインヘッダ部
+    .contents__main-contents
+      .contents__main-contents__main-header
+        .contents__main-contents__main-header__link
+          .contents__main-contents__main-header__link__box Edit
+        .contents__main-contents__main-header__space
+        .contents__main-contents__main-header__group test-group
+        .contents__main-contents__main-header__space2
+        .contents__main-contents__main-header__member member1
+
+      / メインボディ部記述
+      = render 'main_message'
+
+      / 検索フォーム
+      .contents__main-contents__footter
+        = form_for [@group, @message], class: "contents__main-contents__footter__form" do |f|
+          = f.text_field :content ,class: 'contents__main-contents__footter__form__input', placeholder: ' type a messagess'
+          = f.label class: 'contents__main-contents__footter__form__image' do
+            = fa_icon 'image'
+          = f.submit 'Send', class: 'contents__main-contents__footter__form__button'
