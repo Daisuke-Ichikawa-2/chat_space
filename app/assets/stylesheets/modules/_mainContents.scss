@@ -55,6 +55,7 @@
 
         &__body{
             height: calc(100vh - 190px);
+            overflow: scroll;
 
               &__border{
                   background-color: #eeeeee;
