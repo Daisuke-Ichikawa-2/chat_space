@@ -13,7 +13,6 @@ $(function() {
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
-    // alert('test_message')
 
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -31,7 +30,6 @@ $(function() {
       var html = buildHTML(data);
       $('.contents__main-contents__body').append(html)
       $('.contents__main-contents__body').animate({scrollTop: $('.contents__main-contents__body')[0].scrollHeight}, 'fast')
-      // $('.contents__main-contents__footter__form__button')[0].reset()
       $('.contents__main-contents__footter__form__button').prop("disabled", false)
 
     })
