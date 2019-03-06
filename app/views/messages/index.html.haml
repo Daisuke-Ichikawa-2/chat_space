@@ -22,9 +22,11 @@
         .contents__main-contents__main-header__group test-group
         .contents__main-contents__main-header__space2
         .contents__main-contents__main-header__member member1
+        .contents__main-contents__body__border
+
 
       / メインボディ部記述
-      = render 'main_message'
+      = render @messages
 
       / 検索フォーム
       .contents__main-contents__footter
