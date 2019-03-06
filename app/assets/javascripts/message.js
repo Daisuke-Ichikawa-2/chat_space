@@ -26,7 +26,6 @@ $(function() {
     })
 
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
       $('.contents__main-contents__body').append(html)
       $('.contents__main-contents__body').animate({scrollTop: $('.contents__main-contents__body')[0].scrollHeight}, 'fast')
