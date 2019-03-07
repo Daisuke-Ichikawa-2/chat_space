@@ -6,12 +6,12 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @group.users << current_user
+    binding.pry
   end
 
   def edit
     @group = Group.find(params[:id])
 
-    # binding.pry
     # ☆現状はここは保留
     # if @group.save
     #   respond_to do |format|

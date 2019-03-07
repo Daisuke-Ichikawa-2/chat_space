@@ -1,0 +1,40 @@
+メンバー追加分、退避
+
+        <!-- メンバー表示 -->
+      <div class='chat-group-form__field--left'>
+        <%= f.label :メンバー, class: "chat-group-form__label" %>
+      </div>
+
+      <div class='chat-group-form__field--right'>
+              <%= f.text_field :name , class:'chat-group-form__input', placeholder: 'メンバー' %>
+      </div>
+
+
+js退避分
+
+
+
+
+
+
+
+
+
+    // .done(function(products) {
+    //   $(".listview.chat-group-form__field clearfix").empty();
+    //   if (products.length !== 0) {
+    //     products.forEach(function(product){
+    //       appendProduct(product);
+    //     });
+    //   }
+
+    // })
+    // .fail(function() {
+    //   alert('映画検索に失敗しました');
+    // })
+
+
+
+
+
+

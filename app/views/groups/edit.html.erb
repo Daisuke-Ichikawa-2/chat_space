@@ -1,0 +1,45 @@
+<div class='chat-group-form'>
+  <h1>チャットグループ編集</h1>
+  <%= form_for [@group]  do |f| %>
+    <div class="edit_chat_group">
+
+       <div class='chat-group-form__field clearfix'>
+
+        <!-- グループ名表示、入力定義 -->
+        <div class='chat-group-form__field--left'>
+            <%= f.label :グループ名, class: "chat-group-form__label" %>
+        </div>
+        <div class='chat-group-form__field--right'>
+            <%= f.text_field :name, class:"chat-group-form__input" %>
+        </div>
+
+      </div>
+
+      <div class='chat-group-form__field clearfix'>
+
+        <!-- メンバー追加、入力定義 -->
+        <div class='chat-group-form__field--left'>
+          <div class="chat-group-form__label" >
+            <%= f.label :チャットメンバーを追加 %>
+          </div>
+        </div>
+
+        <div class='chat-group-form__field--right'>
+          <div class='chat-group-form__search clearfix'>
+            <%= f.text_field :name , class:'chat-group-form__input', id: 'user-search-field', placeholder: '追加したいユーザを選択してください' %>
+          </div>
+          <div id='user-search-result'>
+              <!-- ここに追加される -->
+          </div>
+        </div>
+
+      <div class='chat-group-form__field clearfix'>
+
+
+      <%= f.submit '更新する', class: "chat-group-form__action-btn" %>
+      </div>
+
+    </div>
+
+  <% end %>
+</div>
