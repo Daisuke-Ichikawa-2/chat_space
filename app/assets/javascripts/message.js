@@ -1,7 +1,6 @@
 $(function() {
   function buildHTML(mes){
     var html = `
-                  <div class = "contents__main-contents__body__space3" ></div>
                   <div class = "contents__main-contents__body__text" >
                   <div class = "contents__main-contents__body__text__user" > ${mes.user_name} </div>
                   <div class = "contents__main-contents__body__text__time"> ${mes.date} </div>

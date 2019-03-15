@@ -11,7 +11,7 @@
 
     //  メインコンテンツーヘッダ
           &__main-header{
-              height: 98px;
+              height: 100px;
               width:  calc(100vw - 300px);
 
                 &__link{
@@ -49,6 +49,11 @@
                     padding:0 40px;
                 }
 
+                &__border{
+                  background-color: #eeeeee;
+                  height: 2px;
+                }
+
           }
 
       // メインボディ
@@ -57,16 +62,17 @@
             height: calc(100vh - 190px);
             overflow: scroll;
 
-              &__border{
-                  background-color: #eeeeee;
-                  height: 2px;
-              }
+
+
               &__space3{
                   height: 46px;
               }
+
             &__text{
               width: 400px;
-              padding: 0 40px;
+              height: 53px;
+              padding: 0 0 40px 40px;
+
                 &__user{
                     font-size:  12px;
                     font-size: 20px;
@@ -81,6 +87,10 @@
                 &__message{
                     font-size:  15px;
                     color:      $siteMainGray;
+
+                &__space4{
+                  height: 40px;
+              }
               }
             }
 
@@ -92,6 +102,7 @@
                 height: 90px;
                 background-color: #ddd;
                 position: relative;
+                bottom: 0px;
 
               &__form{
 
@@ -106,8 +117,8 @@
                 &__image{
                   font-size: 28px;
                   position: absolute;
-                  top: 25px;
-                  right: 260px;
+                  top: 27px;
+                  left: 940px;
                 }
 
                 &__button{

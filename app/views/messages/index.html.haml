@@ -23,16 +23,19 @@
         .contents__main-contents__main-header__group test-group
         .contents__main-contents__main-header__space2
         .contents__main-contents__main-header__member member1
-        .contents__main-contents__body__border
+        .contents__main-contents__main-header__border
 
+      .contents__main-contents__body
 
-      / メインボディ部記述
-      = render @messages
+        .contents__main-contents__body__space3
+        / メインボディ部記述
+        = render @messages
 
       / 検索フォーム
       .contents__main-contents__footter
         = form_for [@group, @message], class: "contents__main-contents__footter__form" do |f|
           = f.text_field :content ,class: 'contents__main-contents__footter__form__input', placeholder: ' type a messagess'
-          = f.label class: 'contents__main-contents__footter__form__image' do
-            = fa_icon 'image'
+          .contents__main-contents__footter__form__image
+            = f.label class: 'contents__main-contents__footter__form__i' do
+              = fa_icon 'image'
           = f.submit 'Send', class: 'contents__main-contents__footter__form__button'
