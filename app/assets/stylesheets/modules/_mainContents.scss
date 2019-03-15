@@ -119,6 +119,10 @@
                   position: absolute;
                   top: 27px;
                   left: 940px;
+
+                  &__none{
+                    display: none;
+                  }
                 }
 
                 &__button{

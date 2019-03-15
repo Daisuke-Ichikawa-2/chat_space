@@ -2,7 +2,7 @@
   window.leastMessage = #{raw @messages.last.to_json}
 
 .contents
-  = render 'side_contents'
+  = render 'shared/side_contents'
   / メインヘッダ部
   .contents__main-contents
     .contents__main-contents__main-header
@@ -16,17 +16,19 @@
       .contents__main-contents__main-header__border
 
     .contents__main-contents__body
-
-      .contents__main-contents__body__space3
-      / メインボディ部記述
-      = render @messages
+      - if @messages.last != nil
+        = hidden_field :leastMessageId , class: "leastMessageId", value: "#{@messages.last.id}"
+        .contents__main-contents__body__space3
+        = render @messages
 
     / 検索フォーム
+
+
     .contents__main-contents__footter
       = form_for [@group, @message], class: "contents__main-contents__footter__form" do |f|
         = f.text_field :content ,class: 'contents__main-contents__footter__form__input', placeholder: ' type a messagess'
         .contents__main-contents__footter__form__image
-          = f.label class: 'contents__main-contents__footter__form__i' do
+          = f.label :image, class: '.contents__main-contents__footter__form__image' do
             = fa_icon 'image'
-            / = f.file_field :image, class: 'hidden'
+            = f.file_field :image, class: 'hidden contents__main-contents__footter__form__image__none'
         = f.submit 'Send', class: 'contents__main-contents__footter__form__button'

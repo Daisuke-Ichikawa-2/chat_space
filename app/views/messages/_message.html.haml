@@ -1,6 +1,8 @@
 .contents__main-contents__body__text
   .contents__main-contents__body__text__user= message.user.name
   .contents__main-contents__body__text__time= message.created_at
-  .contents__main-contents__body__text__message= message.content
-
-
+  .contents__main-contents__body__text__message
+    - if message.content.present?
+      .contents__main-contents__body__text__message
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
