@@ -1,4 +1,7 @@
 $(function() {
+
+  var leastMessage = window.leastMessage;
+
   function buildHTML(mes){
     var html = `
                   <div class = "contents__main-contents__body__text" >
@@ -9,6 +12,32 @@ $(function() {
                 `
     return html;
   }
+
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      $.ajax({
+        type: 'GET',
+        url: window.location.pathname,
+        data: { leastMessage: leastMessage },
+        dataType: 'json'
+      })
+      .done(function(data) {
+        var insertHTML = '';
+        data.forEach(function(message) {
+          insertHTML += buildHTML(message);
+          leastMessage = message;
+        });
+        $('.contents__main-contents__body').append(insertHTML);
+        // アプリケーションっぽくするために実装。短間隔だと履歴が読めない。
+        $('.contents__main-contents__body').animate({scrollTop: $('.contents__main-contents__body')[0].scrollHeight}, 'fast')
+      })
+      .fail(function(json) {
+        alert('自動更新に失敗しました');
+      });
+    } else {
+      clearInterval(interval);
+    }} , 3000 );
+
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();

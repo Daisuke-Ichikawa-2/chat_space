@@ -1,3 +1,11 @@
+.contents__left-contents
+  .contents__left-contents__userform
+    .contents__left-contents__userform__user test-user
+    .contents__left-contents__userform__font
+      = link_to new_group_path  do
+        = fa_icon 'edit'
+      = link_to edit_user_path(current_user)  do
+        = fa_icon 'cog'
 .contents__left-contents__groupform
   - current_user.groups.each do |group|
     = link_to group_messages_path(group) do
@@ -5,7 +13,3 @@
         = group.name
       .contents__left-contents__groupform__group__text
         = group.show_last_message
-
-/ .contents__left-contents__groupform
-/   .contents__left-contents__groupform__group test-group
-/   .contents__left-contents__groupform__group__text さようなら
