@@ -25,10 +25,8 @@ class GroupsController < ApplicationController
   end
 
     def update
-       # binding.pry
 
     if @group.update(group_params)
-      # binding.pry
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
 
     else

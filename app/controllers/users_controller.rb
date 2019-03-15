@@ -13,9 +13,8 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    @users = User.where('name LIKE(?) and id != ?', "%#{params[:keyword]}%" ,current_user)
 
-    # binding.pry
     respond_to do |format|
        format.html
        format.json

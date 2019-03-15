@@ -1,7 +1,7 @@
 $(function() {
 
-var search_list = $("#user-search-result");
-var add_list = $("#user-member-list");
+  var search_list = $("#user-search-result");
+  var add_list = $("#user-member-list");
 
   // html動的追加用メソッド（検索結果用）
   function appendUser(user) {
@@ -12,7 +12,6 @@ var add_list = $("#user-member-list");
                     </div>
                  `
       search_list.append(html);
-      // console.log( $(user))
    }
 
   // html動的追加用メソッド（ユーザ追加用）
@@ -42,7 +41,7 @@ var add_list = $("#user-member-list");
       $(this).parent().remove();
   });
 
-    $("#user-member-list").on("click", '.user-list-add', function () {
+  $("#user-member-list").on("click", '.user-list-add', function () {
       $(this).parent().remove();
   });
 
@@ -58,7 +57,6 @@ var add_list = $("#user-member-list");
 
     // サーバレスポンス後のファンクション組み立て
     .done(function(data){
-      // console.log(data)
       $("#user-search-result").empty();
         if (data.length !== 0) {
           data.forEach(function(user){
@@ -68,9 +66,6 @@ var add_list = $("#user-member-list");
         else {
            appendErrMsgToHTML("一致するユーザはいません。");
               }
-
      })
-
   })
-
 })
