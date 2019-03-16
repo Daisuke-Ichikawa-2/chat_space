@@ -18,7 +18,7 @@ $(function() {
       $.ajax({
         type: 'GET',
         url: window.location.pathname,
-        Data: { leastMessage: leastMessage },
+        data: { leastMessage: leastMessage },
         dataType: 'json'
       })
       .done(function(jsonRcvData) {
@@ -35,7 +35,7 @@ $(function() {
       });
     } else {
       clearInterval(interval);
-    }} , 500000 );
+    }} , 5000 );
 
 
   $('.new_message').on('submit', function(e){
