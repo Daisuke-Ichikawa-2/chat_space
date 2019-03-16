@@ -2,7 +2,7 @@ $(function() {
 
   var leastMessage = window.leastMessage;
 
-  function buildHTML(mes){
+  function buildMessageHTML(mes){
     var html = `
                   <div class = "contents__main-contents__body__text" >
                   <div class = "contents__main-contents__body__text__user" > ${mes.user_name} </div>
@@ -18,13 +18,13 @@ $(function() {
       $.ajax({
         type: 'GET',
         url: window.location.pathname,
-        data: { leastMessage: leastMessage },
+        Data: { leastMessage: leastMessage },
         dataType: 'json'
       })
-      .done(function(data) {
+      .done(function(jsonRcvData) {
         var insertHTML = '';
-        data.forEach(function(message) {
-          insertHTML += buildHTML(message);
+        jsonRcvData.forEach(function(message) {
+          insertHTML += buildMessageHTML(message);
           leastMessage = message;
         });
         $('.contents__main-contents__body').append(insertHTML);
@@ -35,7 +35,7 @@ $(function() {
       });
     } else {
       clearInterval(interval);
-    }} , 5000 );
+    }} , 500000 );
 
 
   $('.new_message').on('submit', function(e){
@@ -52,12 +52,11 @@ $(function() {
       contentType: false
     })
 
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(jsonRcvData){
+      var html = buildMessageHTML(jsonRcvData);
       $('.contents__main-contents__body').append(html)
       $('.contents__main-contents__body').animate({scrollTop: $('.contents__main-contents__body')[0].scrollHeight}, 'fast')
       $('.contents__main-contents__footter__form__button').prop("disabled", false)
-
     })
 
     .fail(function(){
@@ -67,9 +66,7 @@ $(function() {
 
     });
 
-
-
-    })
+  })
 
 
 

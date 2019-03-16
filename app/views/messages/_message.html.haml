@@ -5,4 +5,4 @@
     - if message.content.present?
       .contents__main-contents__body__text__message
         = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    = image_tag message.image.url, class: 'contents__main-contents__body__text__image' if message.image.present?
