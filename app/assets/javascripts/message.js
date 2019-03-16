@@ -4,7 +4,7 @@ $(function() {
 
   function buildMessageHTML(mes){
     var html = `
-                  <div class = "contents__main-contents__body__text" >
+                  <div class = "contents__main-contents__body__text" data-message-id = "${mes.id}">
                   <div class = "contents__main-contents__body__text__user" > ${mes.user_name} </div>
                   <div class = "contents__main-contents__body__text__time"> ${mes.date} </div>
                   <div class = "contents__main-contents__body__text__message"> ${mes.content} </div>
@@ -35,7 +35,7 @@ $(function() {
       });
     } else {
       clearInterval(interval);
-    }} , 5000 );
+    }} , 30000 );
 
 
   $('.new_message').on('submit', function(e){
