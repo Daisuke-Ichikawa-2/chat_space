@@ -28,7 +28,6 @@ $(function() {
           leastMessage = message;
         });
         $('.contents__main-contents__body').append(insertHTML);
-        // アプリケーションっぽくするために実装。短間隔だと履歴が読めない。
         $('.contents__main-contents__body').animate({scrollTop: $('.contents__main-contents__body')[0].scrollHeight}, 'fast')
       })
       .fail(function(json) {
@@ -36,7 +35,7 @@ $(function() {
       });
     } else {
       clearInterval(interval);
-    }} , 200000 );
+    }} , 5000 );
 
 
   $('.new_message').on('submit', function(e){

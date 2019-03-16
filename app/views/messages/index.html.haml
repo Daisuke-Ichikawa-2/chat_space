@@ -10,9 +10,13 @@
         = link_to edit_group_path(@group) do
           .contents__main-contents__main-header__link__box Edit
       .contents__main-contents__main-header__space
-      .contents__main-contents__main-header__group test-group
+      .contents__main-contents__main-header__group
+        = @group.name
       .contents__main-contents__main-header__space2
-      .contents__main-contents__main-header__member member1
+      .contents__main-contents__main-header__member
+        member:
+        - @group.users.each do |user|
+          = user.name
       .contents__main-contents__main-header__border
 
     .contents__main-contents__body
@@ -22,7 +26,6 @@
         = render @messages
 
     / 検索フォーム
-
 
     .contents__main-contents__footter
       = form_for [@group, @message], class: "contents__main-contents__footter__form" do |f|
