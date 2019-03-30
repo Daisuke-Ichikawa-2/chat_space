@@ -35,7 +35,7 @@ $(function() {
       });
     } else {
       clearInterval(interval);
-    }} , 30000 );
+    }} , 300000000 );
 
 
   $('.new_message').on('submit', function(e){
